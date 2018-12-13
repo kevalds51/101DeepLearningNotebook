@@ -57,7 +57,7 @@ train_x, test_x, train_y, test_y = train_test_split(X, Y, test_size = 0.2, )#ran
 # print ((test_y.shape))
 
 # Important parameters and modelling variables
-learning_rate = 0.111
+learning_rate = 0.11
 training_epochs = 1001
 cost_history = np.empty(shape=[1], dtype=float)
 
