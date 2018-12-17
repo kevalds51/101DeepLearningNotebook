@@ -16,6 +16,8 @@ def readData():
     # X = trainDataFrame.drop(['div','FTR', 'key', 'date', 'WHH','WHD','WHA', 'home_team_overall','away_team_overall', 'Bsay n365H','B365D','B365A','BWH','BWD','BWA','GBH','GBD','GBA','IWH','IWD','IWA','LBH','LBD','LBA','SBH','SBD','SBA','WHH','WHD','WHA','SJH','SJD','SJA','VCH','VCD','VCA','BSH','BSD','BSA','Bb1X2','BbMxH','BbAvH','BbMxD','BbAvD','BbMxA','BbAvA','BbOU','BbMx_2.5','BbAv_2.5','BbMx_2.5','BbAv_2.5','BbAH','BbAHh','BbMxAHH','BbAvAHH','BbMxAHA','BbAvAHA','home_player_overall','away_player_overall','home_team_overall','away_team_overall'], axis=1)
     X = trainDataFrame.drop(['div','FTR', 'key', 'date', 'WHH','WHD','WHA', 'home_player_overall','away_player_overall','home_team_overall','away_team_overall'], axis=1)
     y = trainDataFrame['FTR']
+
+    # print (y)
     
 #     nCols = len(trainDataFrame.columns)
     
@@ -38,8 +40,7 @@ def one_hot_encode(labels):
     one_hot_encode = np.zeros((nLabels, nUniqueLabels))
     one_hot_encode[np.arange(nLabels), labels] = 1
     return one_hot_encode
-    
-    
+
 X, Y = readData()
 X, Y = shuffle(X, Y, random_state=1)
 
